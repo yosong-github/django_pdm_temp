@@ -1,0 +1,20 @@
+[project]
+name = "django_pdm_temp"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "yosong", email = "2404559603@qq.com"},
+]
+dependencies = ["django==4.2", "djangorestframework>=3.16.0", "drf-spectacular>=0.28.0", "python-dotenv>=1.1.0", "django-redis>=5.4.0"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+
+
+[tool.pdm.scripts]
+dev = 'python manage.py runserver'
