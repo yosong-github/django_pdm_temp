@@ -1,4 +1,3 @@
-
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.exceptions import APIException
 from rest_framework.throttling import SimpleRateThrottle
@@ -31,11 +30,12 @@ class AuthorsView(ModelViewSet):
     serializer_class = AuthorSerializer
     throttle_classes = [MyThrottle, ]
 
+    
+
     def throttled(self, request, wait):
         raise APIException('你太快了')
     # authentication_classes = []
 
 
     def list(self, request, *args, **kwargs):
-
         return super().list(request, *args, **kwargs)
