@@ -30,7 +30,7 @@ class AuthorsView(ModelViewSet):
     serializer_class = AuthorSerializer
     throttle_classes = [MyThrottle, ]
 
-    
+
 
     def throttled(self, request, wait):
         raise APIException('你太快了')
