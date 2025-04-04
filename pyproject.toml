@@ -15,6 +15,7 @@ distribution = false
 
 [tool.pdm.scripts]
 dev = 'python manage.py runserver'
+fix = 'pre-commit run --all-files'
 
 [dependency-groups]
 dev = [
