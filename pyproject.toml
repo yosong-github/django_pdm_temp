@@ -14,8 +14,7 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-dev = 'python manage.py runserver'
-fix = 'pre-commit run --all-files'
+dev = 'python manage.py runserver
 
 [dependency-groups]
 dev = [
