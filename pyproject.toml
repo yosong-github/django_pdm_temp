@@ -13,8 +13,21 @@ license = {text = "MIT"}
 [tool.pdm]
 distribution = false
 
+[tool.ruff]
+ignore = [
+"E402"
+]
+select = [
+    "I",   # isort
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "UP", # pyupgrade
+]
+line-length = 130
+exclude = ["migrations"]
+
 [tool.pdm.scripts]
-dev = 'python manage.py runserver
+dev = 'python manage.py runserver'
 
 [dependency-groups]
 dev = [
